@@ -1,0 +1,5 @@
+==================
+plone.passwordless
+==================
+
+User documentation
