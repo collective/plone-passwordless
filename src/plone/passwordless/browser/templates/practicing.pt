@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="plone.passwordless">
+
+    <body>
+
+        <metal:content-core fill-slot="content-core">
+
+            <h1>Hello from Passwordless &#9996</h1>
+
+            <div class="container">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Webauthn Register Or Authenticate</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="input-group input-group-lg mb-3">
+                                    <input type="text" class="form-control" id="username" placeholder="username">
+                                    </div>
+                                    <div class="input-group input-group-lg mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text">Attestation Type</label>
+                                        </div>
+                                        <select class="custom-select form-control" id="select-attestation">
+                                            <option selected value="none">None</option>
+                                            <option value="indirect">Indirect</option>
+                                            <option value="direct">Direct</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group input-group-lg mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text">Authenticator Type</label>
+                                        </div>
+                                        <select class="custom-select form-control" id="select-authenticator">
+                                            <option selected value>Unspecified</option>
+                                            <option value="cross-platform">Cross Platform</option>
+                                            <option value="platform">Platform (TPM)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" onclick="authenticator()" class="btn float-right login_btn" data-toggle="popover" title="Popover title" id="authenticate">Authenticate</button>
+                                        <button type="button" onclick="register()" value="Register" class="btn float-left login_btn" data-toggle="popover" title="Popover title">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </metal:content-core>
+
+        </body>
+    </html>

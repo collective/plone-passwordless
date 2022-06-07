@@ -18,4 +18,12 @@
       directory="static"
       />
 
+    <browser:page
+     name="practicing"
+     for="*"
+     template="templates/practicing.pt"
+     permission="zope2.View"
+     />
+
+
 </configure>
