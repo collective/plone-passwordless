@@ -1,4 +1,4 @@
 <records prefix="plone.resources/plone.passwordless"
          interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++plone++plone.passwordless/script.js</value>
+    <!-- <value key="js">++plone++plone.passwordless/script.js</value> -->
 </records>

@@ -18,7 +18,13 @@
       directory="static"
       />
 
-    <browser:page
+
+  <browser:resourceDirectory
+      name="plone.passwordless"
+      directory="static"
+      />
+
+  <browser:page
      name="practicing"
      for="*"
      class=".views.PracticingView"
