@@ -1,5 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="plone.passwordless">
 
+    <metal:block fill-slot="javascript_head_slot">
+        <script type="text/javascript" tal:attributes="src string:$portal_url/++resource++plone.passwordless/script.js"></script>
+    </metal:block>
+
     <body>
 
         <metal:content-core fill-slot="content-core">

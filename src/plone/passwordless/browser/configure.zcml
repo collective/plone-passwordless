@@ -18,9 +18,16 @@
       directory="static"
       />
 
-    <browser:page
+
+  <browser:resourceDirectory
+      name="plone.passwordless"
+      directory="static"
+      />
+
+  <browser:page
      name="practicing"
      for="*"
+     class=".views.PracticingView"
      template="templates/practicing.pt"
      permission="zope2.View"
      />
