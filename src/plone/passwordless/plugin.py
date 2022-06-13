@@ -82,6 +82,7 @@ class PasswordlessPlugin(BasePlugin):
         login = credentials.get("login", None)
         password = credentials.get("password", None)
         if login == "aj":
+            print(credentials)
             print("authenticated")
             return "aj", "aj"
 
