@@ -1,0 +1,31 @@
+<html metal:use-macro="context/main_template/macros/master">
+    <body>
+        <div metal:fill-slot="main">
+            <br/>
+            <ul tal:define="member python: context.portal_membership.getAuthenticatedMember()" >
+                <li>URL: <span tal:content="context/absolute_url" /></li>
+                <li>VHost: <span tal:content="request/HTTP_HOST"/></li>
+                <li>UID: <span tal:content="context/UID|nothing" /></li>
+                <li>Member: <span tal:content="member/getUserName" /></li>
+                <li>Groups: <span tal:content="member/getGroups" tal:on-error="string: error"/></li>
+                <li>Roles: <span tal:content="member/getRoles" /></li>
+                <li>Roles in context: <span tal:content="python: member.getRolesInContext(context)" /></li>
+                <li>Language context object: <span tal:content="context/Language"/></li>
+                <li>Request language: <span tal:content="request/LANGUAGE"/></li>
+                <li>Skin: <span tal:content="context/getCurrentSkinName"/></li>
+            </ul>
+            <hr/>
+            <pre tal:content="request/text" />
+
+            <table tal:define="data view/getInstanceDict" class="table-striped table">
+                <caption>Instance dict</caption>
+                <tbody>
+                    <tr tal:repeat="k data/keys">
+                        <td tal:content="k"/>
+                        <td tal:content="python: data[k]"/>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

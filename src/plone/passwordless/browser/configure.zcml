@@ -32,5 +32,13 @@
      permission="zope2.View"
      />
 
+    !-- DEBUG -->
+  <browser:page
+        for="*"
+        name="debug"
+        permission="zope2.View"
+        class=".debug.Debug"
+        template="debug.pt"
+    />
 
 </configure>

@@ -32,7 +32,7 @@
       directory="profiles/uninstall"
       description="Uninstalls the plone.passwordless add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
+      post_handler=".setuphandlers.post_uninstall"
       />
 
   <utility
